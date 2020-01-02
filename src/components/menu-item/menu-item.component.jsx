@@ -3,7 +3,7 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import './menu-item.styles.scss'
 // functional component, don`t need state, only passed props
-// prop history só pode ser utilizada ao usar o HOC withRouter
+// prop history, linkURL e match só podem ser utilizadas ao usar o HOC withRouter
 const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
   <div
     className={`${size}  menu-item`}
