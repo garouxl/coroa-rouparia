@@ -1,8 +1,14 @@
 import React from 'react'
+// withRouter é um HOC que permite o uso da api de history
+import { withRouter } from 'react-router-dom'
 import './menu-item.styles.scss'
 // functional component, don`t need state, only passed props
-const MenuItem = ({ title, imageUrl, size }) => (
-  <div className={`${size}  menu-item`}>
+// prop history só pode ser utilizada ao usar o HOC withRouter
+const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
+  <div
+    className={`${size}  menu-item`}
+    onClick={() => history.push(`${match.url}${linkUrl}`)}
+  >
     <div
       className='background-image'
       style={{
@@ -16,4 +22,4 @@ const MenuItem = ({ title, imageUrl, size }) => (
   </div>
 )
 
-export default MenuItem
+export default withRouter(MenuItem)
