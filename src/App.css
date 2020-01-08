@@ -1,5 +1,10 @@
 * {
-  outline: transparent;
+  box-sizing: border-box;
+  outline: none;
+}
+
+*:focus {
+  outline: none;
 }
 
 body {
@@ -9,4 +14,8 @@ body {
 a {
   text-decoration: none;
   color: #000
+}
+
+.wrapper {
+  padding: 20px 80px;
 }
