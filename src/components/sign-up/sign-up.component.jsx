@@ -41,7 +41,7 @@ class SignUp extends React.Component {
         confirmPassword: ''
       })
     } catch (error) {
-      console.log(`There was an error: ${error}`)
+      alert(`There was an error: ${error}`)
     }
   }
 
