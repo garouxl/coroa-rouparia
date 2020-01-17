@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import { auth } from '../../firebase/firebase.utils'
 
@@ -24,4 +25,10 @@ const Header = ({ currentUser }) => (
   </div>
 )
 
-export default Header
+// state aqui é o top level root reducer
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+})
+
+// o HOC connect é executado e traz o root-reducer, então executado novamente com o componente que ira usa-lo
+export default connect(mapStateToProps)(Header)
