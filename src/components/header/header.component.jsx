@@ -30,5 +30,5 @@ const mapStateToProps = state => ({
   currentUser: state.user.currentUser
 })
 
-// o HOC connect é executado e traz o root-reducer, então executado novamente com o componente que ira usa-lo
+// o HOC connect é executado e traz o root-reducer( o state param de mapStateToProps ), então executado novamente com o componente que ira usa-lo
 export default connect(mapStateToProps)(Header)
