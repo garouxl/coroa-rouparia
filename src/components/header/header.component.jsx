@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import { auth } from '../../firebase/firebase.utils'
 import CartIcon from '../cart-icon/cart-icon.component'
-import CartDropdown from '../cart-dropdown/cart-dropdown.component'
+import Cart from '../cart/cart.component'
 
 import { ReactComponent as Logo } from '../../assets/crown.svg'
 
@@ -28,7 +28,7 @@ const Header = ({ currentUser, hidden }) => (
     {
       hidden
         ? null
-        : <CartDropdown />
+        : <Cart />
     }
   </div>
 )
@@ -36,7 +36,7 @@ const Header = ({ currentUser, hidden }) => (
 // state aqui é o top level root reducer
 const mapStateToProps = ({
   user: { currentUser },
-  cartDropdown: { hidden }
+  cart: { hidden }
 }) => ({
   currentUser,
   hidden
