@@ -17,6 +17,11 @@ a {
   color: #000
 }
 
+::selection {
+  background-color: #000;
+  color: #fff;
+}
+
 .wrapper {
   padding: 20px 80px;
 }
