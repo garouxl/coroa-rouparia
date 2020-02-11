@@ -1,10 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
 
 import { auth } from '../../firebase/firebase.utils'
 import CartIcon from '../cart-icon/cart-icon.component'
 import CartDropdown from '../cart/cart-dropdown.component'
+import { selectCartHidden } from '../../redux/cart/cart.selectors'
+import { selectCurrentUser } from '../../redux/user/user.selectors'
 
 import { ReactComponent as Logo } from '../../assets/crown.svg'
 
@@ -34,12 +37,9 @@ const Header = ({ currentUser, hidden }) => (
 )
 
 // state aqui é o top level root reducer
-const mapStateToProps = ({
-  user: { currentUser },
-  cart: { hidden }
-}) => ({
-  currentUser,
-  hidden
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden
 })
 
 // o HOC connect é executado e traz o root-reducer( o state param de mapStateToProps ), então executado novamente com o componente que ira usa-lo

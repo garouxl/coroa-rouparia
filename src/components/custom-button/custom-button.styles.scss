@@ -15,11 +15,20 @@
   cursor: pointer;
   display: flex;
   justify-content: center;
+  transition: all .4s;
 
-  &:hover {
+  &:hover{
     background-color: white;
     color: #000;
     border: 1px solid #000;
+    transform: translateY(-.5rem);
+    box-shadow: 0 1rem 2rem rgba(#000, .3);
+  }
+
+  &:active,
+  &:focus {
+    transform: translateY(-.3rem);
+    box-shadow: 0 .5rem 1rem rgba(#000, .3);
   }
 
   &.google-sign-in {

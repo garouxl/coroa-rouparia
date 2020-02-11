@@ -22,7 +22,7 @@
     position: absolute;
     top: 255px;
     opacity: 0;
-    transition: opacity 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    transition: all 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   }
 
   &:hover {
