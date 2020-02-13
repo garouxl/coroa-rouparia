@@ -30,4 +30,16 @@
     margin-left: auto;
     font-size: 36px;
   }
+
+  .test-warning {
+    background-color: rgba(#ff0000, $alpha: .2);
+    border: 1px solid #f00;
+    color: #f00;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1rem 3rem rgba(#333, $alpha: .5);
+    padding: .5rem .8rem;
+    margin: 1.5rem 0;
+  }
 }
+
