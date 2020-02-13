@@ -18,7 +18,7 @@ const CartDropdown = ({ cartItems, history, dispatch }) => (
           ? cartItems.map(cartItem => (
             <CartItem key={cartItem.id} item={cartItem} />
           ))
-          : <span className='empty-message'>Your cart is empty</span>
+          : <span className='empty-message'>Seu carrinho tá vazio</span>
       }
     </div>
     <CustomButton onClick={() => {
@@ -26,7 +26,7 @@ const CartDropdown = ({ cartItems, history, dispatch }) => (
       dispatch(toggleCartHidden())
     }}
     >
-      GO TO CHECKOUT
+      Vá para o Checkout
     </CustomButton>
   </div>
 )
