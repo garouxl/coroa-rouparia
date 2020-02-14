@@ -3,13 +3,14 @@ import 'firebase/firestore'
 import 'firebase/auth'
 
 const config = {
-  apiKey: 'AIzaSyABZDEipwkckrKiKv_pDgccIS_PHCpOb6I',
-  authDomain: 'crwn-db-130f6.firebaseapp.com',
-  databaseURL: 'https://crwn-db-130f6.firebaseio.com',
-  projectId: 'crwn-db-130f6',
-  storageBucket: 'crwn-db-130f6.appspot.com',
-  messagingSenderId: '638749419887',
-  appId: '1:638749419887:web:0038bbacf3b683b7baa09a'
+  apiKey: 'AIzaSyCQQQq9KcYF9J_9gH9x-vyvMkvZD0xm7Sk',
+  authDomain: 'coroa-rouparia.firebaseapp.com',
+  databaseURL: 'https://coroa-rouparia.firebaseio.com',
+  projectId: 'coroa-rouparia',
+  storageBucket: 'coroa-rouparia.appspot.com',
+  messagingSenderId: '1029554213555',
+  appId: '1:1029554213555:web:b5e05255b9fbc0ae6b96c6',
+  measurementId: 'G-ZNNV5Q64FS'
 }
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {

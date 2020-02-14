@@ -27,8 +27,11 @@ const CheckoutPage = ({ cartItems, total }) => (
     </div>
     <div className='test-warning'>
       <p>
-        &#9995; Use os dados abaixo para finalizar a compra &#9996; <br />
-        <strong>4485 5500 8076 7429 - Exp: 09/20 - CVV: 847</strong>
+        <span title='imagem de atenção' role='img' aria-label='imagem de atenção'>&#9995;</span>
+        Use os dados abaixo para finalizar a compra
+        <span title='imagem de atenção' role='img' aria-label='imagem de atenção'>&#9996;</span>
+        <br />
+        <strong>4485 5500 8076 7429 | Exp: 09/20 | CVV: 847</strong>
       </p>
     </div>
     <StripeCheckoutButton price={total} />
