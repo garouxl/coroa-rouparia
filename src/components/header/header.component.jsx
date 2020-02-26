@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 
@@ -11,29 +10,29 @@ import { selectCurrentUser } from '../../redux/user/user.selectors'
 
 import { ReactComponent as Logo } from '../../assets/crown.svg'
 
-import './header.styles.scss'
+import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink } from './header.styles'
 
 const Header = ({ currentUser, hidden }) => (
-  <div className='header'>
-    <Link className='logo-container' to='/'>
+  <HeaderContainer>
+    <LogoContainer to='/'>
       <Logo className='logo' />
-    </Link>
-    <div className='options'>
-      <Link className='option' to='/shop'>COMPRE</Link>
-      <Link className='option' to='/shop'>CONTATO</Link>
+    </LogoContainer>
+    <OptionsContainer>
+      <OptionLink to='/shop'>COMPRE</OptionLink>
+      <OptionLink to='/shop'>CONTATO</OptionLink>
       {
         currentUser
-          ? <div className='option' onClick={() => auth.signOut()}>SAIR</div>
-          : <Link className='option' to='/signin'>ENTRAR</Link>
+          ? <OptionLink as='div' onClick={() => auth.signOut()}>SAIR</OptionLink>
+          : <OptionLink to='/signin'>ENTRAR</OptionLink>
       }
       <CartIcon />
-    </div>
+    </OptionsContainer>
     {
       hidden
         ? null
         : <CartDropdown />
     }
-  </div>
+  </HeaderContainer>
 )
 
 // state aqui é o top level root reducer
